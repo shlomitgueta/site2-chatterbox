@@ -1,0 +1,202 @@
+{
+  "id": "050883fe-566b-4e7c-bea5-4d5fb811749e",
+  "revision": 0,
+  "last_node_id": 9,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "LoadAudio",
+      "pos": [
+        -665.3433227539062,
+        615.810791015625
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "LoadAudio-הקול שאני רוצה שיצא",
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "ללא כותרת.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 6,
+      "type": "SaveAudioMP3",
+      "pos": [
+        146.80545043945312,
+        635.6629638671875
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 7
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "FL_ChatterboxTTS",
+      "pos": [
+        -332.786865234375,
+        603.9740600585938
+      ],
+      "size": [
+        429.1096496582031,
+        345.37811279296875
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_prompt",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "message",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "aux_id": "filliptm/ComfyUI_Fill-ChatterBox",
+        "ver": "d900801d38b6b9a03f7768f8f7c6d80ececd3849",
+        "Node name for S&R": "FL_ChatterboxTTS"
+      },
+      "widgets_values": [
+        "put the text in the chatterbox tea, tea,ess. ,put the voice you want in the load audio ",
+        0.25000000000000006,
+        0.20000000000000004,
+        0.20000000000000004,
+        false,
+        true,
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    }
+  ],
+  "links": [
+    [
+      7,
+      5,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ],
+    [
+      15,
+      9,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "chatterbox-clone voice ot text",
+      "bounding": [
+        -675.3433227539062,
+        530.3740234375,
+        1102.148681640625,
+        428.9781188964844
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.876922695000001,
+      "offset": [
+        1904.814009970689,
+        51.135157250803594
+      ]
+    },
+    "frontendVersion": "1.21.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
